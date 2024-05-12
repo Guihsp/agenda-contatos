@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #292c38;
+    --background-white: #eee;
+    --background-gary: #f5f5f5;
+    --background-green: #2c9986;
+    --text-color-dark: #333;
+    --text-color-light: #848999;
+    --text-color-white: #fff;
+    --font-family: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+body {
+    background-color: var(--background-white);
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--text-color-white);
+    padding: 1.313rem 0;
+}
+
+footer {
+    background-color: var(--background-green);
+    color: var(--text-color-white);
+    padding: 1.313rem 0;
+}
+
+header .container, footer .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo, footer .logo{
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+header .nav-bar, footer .nav-bar{
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+header .nav-bar :nth-child(1) .nav-link {
+    color: var(--text-color-white);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+header .nav-bar :nth-child(2) .nav-link {
+    color: var(--text-color-white);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background-color: var(--background-green);
+}
+
+footer .nav-bar .nav-link {
+    color: var(--text-color-white);
+    text-decoration: none;
+}
