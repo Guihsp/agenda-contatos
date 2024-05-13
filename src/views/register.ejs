@@ -11,8 +11,11 @@
         <div class="container">
 
           <h1 class="text-center title">Cadastre-se</h1>
+
+          <%- include('includes/alert') %>
+
           <div class="row">
-            <form action="/login/login" method="POST">
+            <form action="/register" method="POST">
               <input type="hidden" name="_csrf" value=<%= csrfToken %>>
               
               <div class="form-group">
