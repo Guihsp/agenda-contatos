@@ -20,6 +20,9 @@
 
 body {
     background-color: var(--background-white);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .container {
@@ -39,6 +42,7 @@ footer {
     background-color: var(--background-green);
     color: var(--text-color-white);
     padding: 1.313rem 0;
+    flex-shrink: 0;
 }
 
 header .container, footer .container{
@@ -77,4 +81,23 @@ header .nav-bar :nth-child(2) .nav-link {
 footer .nav-bar .nav-link {
     color: var(--text-color-white);
     text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 0 auto;
+}
+.text-center {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: var(--text-color-dark);
 }

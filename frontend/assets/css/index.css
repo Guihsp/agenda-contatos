@@ -1,26 +1,9 @@
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 3rem 0;
-    min-height: 95vh;
-}
-
-main .text-center {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-main .title {
-    font-size: 2.5rem;
-    font-weight: 400;
-    margin-bottom: 1rem;
-}
-
 main .row .alert{
-    padding: 0.5rem 1rem;
+    padding: 0.7rem 1rem;
     margin-bottom: 1rem;
     border-radius: 0.25rem;
+    color: #721c24;
+    background-color: #f8d7da;
 }
 
 main .row .table {
