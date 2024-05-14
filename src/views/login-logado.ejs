@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<% include('includes/head') %>
+
+  <body>
+
+    <%- include('includes/header') %>
+
+    <main>
+      <div class="container">
+
+        <h1 class="text-center title">VOCÊ ESTÁ LOGADO COMO <%= user.email %></h1>
+        <p class="text-center">
+            Voltar para a <a href="/">agenda</a> ou <a href="/logout">sair</a>
+        </p>
+  
+        <%- include('includes/alert') %>
+  
+        
+      </div>
+    </main>
+
+
+    <%- include('includes/footer') %>
+    <script src="./assets/js/bundle.js"></script>
+  </body>
+
+</html>
