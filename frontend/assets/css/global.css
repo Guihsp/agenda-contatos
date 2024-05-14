@@ -36,6 +36,7 @@ header {
     background-color: var(--primary-color);
     color: var(--text-color-white);
     padding: 1.313rem 0;
+    margin-bottom: 2rem;
 }
 
 footer {
@@ -43,6 +44,7 @@ footer {
     color: var(--text-color-white);
     padding: 1.313rem 0;
     flex-shrink: 0;
+    margin-top: 2rem;
 }
 
 header .container, footer .container{
@@ -51,9 +53,11 @@ header .container, footer .container{
     align-items: center;
 }
 
-header .logo, footer .logo{
+header .logo a, footer .logo a{
     font-size: 1.5rem;
     font-weight: 600;
+    color: var(--text-color-white);
+    text-decoration: none;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -84,6 +88,7 @@ footer .nav-bar .nav-link {
 }
 
 main {
+    padding: 2rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -98,6 +103,22 @@ main {
 .title {
     font-size: 2.5rem;
     font-weight: 400;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
     color: var(--text-color-dark);
+}
+
+.row .alert{
+    padding: 0.7rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+}
+
+.row .alert.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.row .alert.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
 }
