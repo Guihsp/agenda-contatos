@@ -107,6 +107,13 @@ main {
     color: var(--text-color-dark);
 }
 
+.title-h2 {
+    font-size: 1.7rem;
+    font-weight: 400;
+    margin: 1rem 0;
+    color: var(--text-color-dark);
+}
+
 .row .alert{
     padding: 0.7rem 1rem;
     margin-bottom: 1rem;
