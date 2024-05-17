@@ -95,9 +95,20 @@ main {
     justify-content: center;
     flex: 1 0 auto;
 }
+
 .text-center {
     text-align: center;
     margin-bottom: 1rem;
+}
+
+.text-danger {
+    color: #f83939;
+    text-decoration: none;
+}
+
+.text-edit {
+    color: #2c9986;
+    text-decoration: none;
 }
 
 .title {
@@ -114,10 +125,15 @@ main {
     color: var(--text-color-dark);
 }
 
-.row .alert{
+.row .alert, .alert-info{
     padding: 0.7rem 1rem;
     margin-bottom: 1rem;
     border-radius: 0.25rem;
+}
+
+.alert-info {
+    background-color: #cce5ff;
+    color: var(--text-color-dark);
 }
 
 .row .alert.alert-success {

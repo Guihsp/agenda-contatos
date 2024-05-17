@@ -176,9 +176,20 @@ main {
     justify-content: center;
     flex: 1 0 auto;
 }
+
 .text-center {
     text-align: center;
     margin-bottom: 1rem;
+}
+
+.text-danger {
+    color: #f83939;
+    text-decoration: none;
+}
+
+.text-edit {
+    color: #2c9986;
+    text-decoration: none;
 }
 
 .title {
@@ -195,10 +206,15 @@ main {
     color: var(--text-color-dark);
 }
 
-.row .alert{
+.row .alert, .alert-info{
     padding: 0.7rem 1rem;
     margin-bottom: 1rem;
     border-radius: 0.25rem;
+}
+
+.alert-info {
+    background-color: #cce5ff;
+    color: var(--text-color-dark);
 }
 
 .row .alert.alert-success {
@@ -209,7 +225,7 @@ main {
 .row .alert.alert-danger {
     background-color: #f8d7da;
     color: #721c24;
-}`, "",{"version":3,"sources":["webpack://./frontend/assets/css/global.css"],"names":[],"mappings":"AAEA;IACI,wBAAwB;IACxB,wBAAwB;IACxB,0BAA0B;IAC1B,2BAA2B;IAC3B,uBAAuB;IACvB,2BAA2B;IAC3B,wBAAwB;IACxB,uCAAuC;AAC3C;;AAEA;IACI,SAAS;IACT,UAAU;IACV,sBAAsB;IACtB,+BAA+B;AACnC;;AAEA;IACI,yCAAyC;IACzC,aAAa;IACb,sBAAsB;IACtB,iBAAiB;AACrB;;AAEA;IACI,iBAAiB;IACjB,cAAc;IACd,eAAe;IACf,WAAW;AACf;;AAEA;IACI,sCAAsC;IACtC,8BAA8B;IAC9B,mBAAmB;IACnB,mBAAmB;AACvB;;AAEA;IACI,yCAAyC;IACzC,8BAA8B;IAC9B,mBAAmB;IACnB,cAAc;IACd,gBAAgB;AACpB;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;AACvB;;AAEA;IACI,iBAAiB;IACjB,gBAAgB;IAChB,8BAA8B;IAC9B,qBAAqB;IACrB,aAAa;IACb,mBAAmB;IACnB,WAAW;AACf;;AAEA;IACI,aAAa;IACb,SAAS;IACT,gBAAgB;AACpB;;AAEA;IACI,8BAA8B;IAC9B,qBAAqB;IACrB,oBAAoB;AACxB;;AAEA;IACI,8BAA8B;IAC9B,qBAAqB;IACrB,oBAAoB;IACpB,yCAAyC;AAC7C;;AAEA;IACI,8BAA8B;IAC9B,qBAAqB;AACzB;;AAEA;IACI,eAAe;IACf,aAAa;IACb,sBAAsB;IACtB,mBAAmB;IACnB,uBAAuB;IACvB,cAAc;AAClB;AACA;IACI,kBAAkB;IAClB,mBAAmB;AACvB;;AAEA;IACI,iBAAiB;IACjB,gBAAgB;IAChB,cAAc;IACd,6BAA6B;AACjC;;AAEA;IACI,iBAAiB;IACjB,gBAAgB;IAChB,cAAc;IACd,6BAA6B;AACjC;;AAEA;IACI,oBAAoB;IACpB,mBAAmB;IACnB,sBAAsB;AAC1B;;AAEA;IACI,yBAAyB;IACzB,cAAc;AAClB;;AAEA;IACI,yBAAyB;IACzB,cAAc;AAClB","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');\r\n\r\n:root {\r\n    --primary-color: #292c38;\r\n    --background-white: #eee;\r\n    --background-gary: #f5f5f5;\r\n    --background-green: #2c9986;\r\n    --text-color-dark: #333;\r\n    --text-color-light: #848999;\r\n    --text-color-white: #fff;\r\n    --font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n* {\r\n    margin: 0;\r\n    padding: 0;\r\n    box-sizing: border-box;\r\n    font-family: var(--font-family);\r\n}\r\n\r\nbody {\r\n    background-color: var(--background-white);\r\n    display: flex;\r\n    flex-direction: column;\r\n    min-height: 100vh;\r\n}\r\n\r\n.container {\r\n    max-width: 1170px;\r\n    margin: 0 auto;\r\n    padding: 0 15px;\r\n    width: 100%;\r\n}\r\n\r\nheader {\r\n    background-color: var(--primary-color);\r\n    color: var(--text-color-white);\r\n    padding: 1.313rem 0;\r\n    margin-bottom: 2rem;\r\n}\r\n\r\nfooter {\r\n    background-color: var(--background-green);\r\n    color: var(--text-color-white);\r\n    padding: 1.313rem 0;\r\n    flex-shrink: 0;\r\n    margin-top: 2rem;\r\n}\r\n\r\nheader .container, footer .container{\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n}\r\n\r\nheader .logo a, footer .logo a{\r\n    font-size: 1.5rem;\r\n    font-weight: 600;\r\n    color: var(--text-color-white);\r\n    text-decoration: none;\r\n    display: flex;\r\n    align-items: center;\r\n    gap: 0.5rem;\r\n}\r\n\r\nheader .nav-bar, footer .nav-bar{\r\n    display: flex;\r\n    gap: 1rem;\r\n    list-style: none;\r\n}\r\n\r\nheader .nav-bar :nth-child(1) .nav-link {\r\n    color: var(--text-color-white);\r\n    text-decoration: none;\r\n    padding: 0.5rem 1rem;\r\n}\r\n\r\nheader .nav-bar :nth-child(2) .nav-link {\r\n    color: var(--text-color-white);\r\n    text-decoration: none;\r\n    padding: 0.5rem 1rem;\r\n    background-color: var(--background-green);\r\n}\r\n\r\nfooter .nav-bar .nav-link {\r\n    color: var(--text-color-white);\r\n    text-decoration: none;\r\n}\r\n\r\nmain {\r\n    padding: 2rem 0;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    justify-content: center;\r\n    flex: 1 0 auto;\r\n}\r\n.text-center {\r\n    text-align: center;\r\n    margin-bottom: 1rem;\r\n}\r\n\r\n.title {\r\n    font-size: 2.5rem;\r\n    font-weight: 400;\r\n    margin: 1rem 0;\r\n    color: var(--text-color-dark);\r\n}\r\n\r\n.title-h2 {\r\n    font-size: 1.7rem;\r\n    font-weight: 400;\r\n    margin: 1rem 0;\r\n    color: var(--text-color-dark);\r\n}\r\n\r\n.row .alert{\r\n    padding: 0.7rem 1rem;\r\n    margin-bottom: 1rem;\r\n    border-radius: 0.25rem;\r\n}\r\n\r\n.row .alert.alert-success {\r\n    background-color: #d4edda;\r\n    color: #155724;\r\n}\r\n\r\n.row .alert.alert-danger {\r\n    background-color: #f8d7da;\r\n    color: #721c24;\r\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./frontend/assets/css/global.css"],"names":[],"mappings":"AAEA;IACI,wBAAwB;IACxB,wBAAwB;IACxB,0BAA0B;IAC1B,2BAA2B;IAC3B,uBAAuB;IACvB,2BAA2B;IAC3B,wBAAwB;IACxB,uCAAuC;AAC3C;;AAEA;IACI,SAAS;IACT,UAAU;IACV,sBAAsB;IACtB,+BAA+B;AACnC;;AAEA;IACI,yCAAyC;IACzC,aAAa;IACb,sBAAsB;IACtB,iBAAiB;AACrB;;AAEA;IACI,iBAAiB;IACjB,cAAc;IACd,eAAe;IACf,WAAW;AACf;;AAEA;IACI,sCAAsC;IACtC,8BAA8B;IAC9B,mBAAmB;IACnB,mBAAmB;AACvB;;AAEA;IACI,yCAAyC;IACzC,8BAA8B;IAC9B,mBAAmB;IACnB,cAAc;IACd,gBAAgB;AACpB;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;AACvB;;AAEA;IACI,iBAAiB;IACjB,gBAAgB;IAChB,8BAA8B;IAC9B,qBAAqB;IACrB,aAAa;IACb,mBAAmB;IACnB,WAAW;AACf;;AAEA;IACI,aAAa;IACb,SAAS;IACT,gBAAgB;AACpB;;AAEA;IACI,8BAA8B;IAC9B,qBAAqB;IACrB,oBAAoB;AACxB;;AAEA;IACI,8BAA8B;IAC9B,qBAAqB;IACrB,oBAAoB;IACpB,yCAAyC;AAC7C;;AAEA;IACI,8BAA8B;IAC9B,qBAAqB;AACzB;;AAEA;IACI,eAAe;IACf,aAAa;IACb,sBAAsB;IACtB,mBAAmB;IACnB,uBAAuB;IACvB,cAAc;AAClB;;AAEA;IACI,kBAAkB;IAClB,mBAAmB;AACvB;;AAEA;IACI,cAAc;IACd,qBAAqB;AACzB;;AAEA;IACI,cAAc;IACd,qBAAqB;AACzB;;AAEA;IACI,iBAAiB;IACjB,gBAAgB;IAChB,cAAc;IACd,6BAA6B;AACjC;;AAEA;IACI,iBAAiB;IACjB,gBAAgB;IAChB,cAAc;IACd,6BAA6B;AACjC;;AAEA;IACI,oBAAoB;IACpB,mBAAmB;IACnB,sBAAsB;AAC1B;;AAEA;IACI,yBAAyB;IACzB,6BAA6B;AACjC;;AAEA;IACI,yBAAyB;IACzB,cAAc;AAClB;;AAEA;IACI,yBAAyB;IACzB,cAAc;AAClB","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');\r\n\r\n:root {\r\n    --primary-color: #292c38;\r\n    --background-white: #eee;\r\n    --background-gary: #f5f5f5;\r\n    --background-green: #2c9986;\r\n    --text-color-dark: #333;\r\n    --text-color-light: #848999;\r\n    --text-color-white: #fff;\r\n    --font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n* {\r\n    margin: 0;\r\n    padding: 0;\r\n    box-sizing: border-box;\r\n    font-family: var(--font-family);\r\n}\r\n\r\nbody {\r\n    background-color: var(--background-white);\r\n    display: flex;\r\n    flex-direction: column;\r\n    min-height: 100vh;\r\n}\r\n\r\n.container {\r\n    max-width: 1170px;\r\n    margin: 0 auto;\r\n    padding: 0 15px;\r\n    width: 100%;\r\n}\r\n\r\nheader {\r\n    background-color: var(--primary-color);\r\n    color: var(--text-color-white);\r\n    padding: 1.313rem 0;\r\n    margin-bottom: 2rem;\r\n}\r\n\r\nfooter {\r\n    background-color: var(--background-green);\r\n    color: var(--text-color-white);\r\n    padding: 1.313rem 0;\r\n    flex-shrink: 0;\r\n    margin-top: 2rem;\r\n}\r\n\r\nheader .container, footer .container{\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n}\r\n\r\nheader .logo a, footer .logo a{\r\n    font-size: 1.5rem;\r\n    font-weight: 600;\r\n    color: var(--text-color-white);\r\n    text-decoration: none;\r\n    display: flex;\r\n    align-items: center;\r\n    gap: 0.5rem;\r\n}\r\n\r\nheader .nav-bar, footer .nav-bar{\r\n    display: flex;\r\n    gap: 1rem;\r\n    list-style: none;\r\n}\r\n\r\nheader .nav-bar :nth-child(1) .nav-link {\r\n    color: var(--text-color-white);\r\n    text-decoration: none;\r\n    padding: 0.5rem 1rem;\r\n}\r\n\r\nheader .nav-bar :nth-child(2) .nav-link {\r\n    color: var(--text-color-white);\r\n    text-decoration: none;\r\n    padding: 0.5rem 1rem;\r\n    background-color: var(--background-green);\r\n}\r\n\r\nfooter .nav-bar .nav-link {\r\n    color: var(--text-color-white);\r\n    text-decoration: none;\r\n}\r\n\r\nmain {\r\n    padding: 2rem 0;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    justify-content: center;\r\n    flex: 1 0 auto;\r\n}\r\n\r\n.text-center {\r\n    text-align: center;\r\n    margin-bottom: 1rem;\r\n}\r\n\r\n.text-danger {\r\n    color: #f83939;\r\n    text-decoration: none;\r\n}\r\n\r\n.text-edit {\r\n    color: #2c9986;\r\n    text-decoration: none;\r\n}\r\n\r\n.title {\r\n    font-size: 2.5rem;\r\n    font-weight: 400;\r\n    margin: 1rem 0;\r\n    color: var(--text-color-dark);\r\n}\r\n\r\n.title-h2 {\r\n    font-size: 1.7rem;\r\n    font-weight: 400;\r\n    margin: 1rem 0;\r\n    color: var(--text-color-dark);\r\n}\r\n\r\n.row .alert, .alert-info{\r\n    padding: 0.7rem 1rem;\r\n    margin-bottom: 1rem;\r\n    border-radius: 0.25rem;\r\n}\r\n\r\n.alert-info {\r\n    background-color: #cce5ff;\r\n    color: var(--text-color-dark);\r\n}\r\n\r\n.row .alert.alert-success {\r\n    background-color: #d4edda;\r\n    color: #155724;\r\n}\r\n\r\n.row .alert.alert-danger {\r\n    background-color: #f8d7da;\r\n    color: #721c24;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -247,17 +263,17 @@ main .row .table th  {
     background-color:var(--background-green);
     color: var(--text-color-white);
     font-weight: 600;
-    padding: 0.5rem;
+    padding: 0.7rem;
 }
 
 main .row .table td {
-    padding: 0.5rem;
+    padding: 0.7rem;
     text-align: center;
     border-bottom: 1px solid #c4c4c4;
 }
 
 main .row .table tr:hover {background-color: #ddd;}
-`, "",{"version":3,"sources":["webpack://./frontend/assets/css/index.css"],"names":[],"mappings":"AAAA;IACI,WAAW;IACX,yBAAyB;IACzB,mBAAmB;AACvB;;;AAGA;IACI,wCAAwC;IACxC,8BAA8B;IAC9B,gBAAgB;IAChB,eAAe;AACnB;;AAEA;IACI,eAAe;IACf,kBAAkB;IAClB,gCAAgC;AACpC;;AAEA,2BAA2B,sBAAsB,CAAC","sourcesContent":["main .row .table {\r\n    width: 100%;\r\n    border-collapse: collapse;\r\n    margin-bottom: 1rem;\r\n}\r\n\r\n\r\nmain .row .table th  {\r\n    background-color:var(--background-green);\r\n    color: var(--text-color-white);\r\n    font-weight: 600;\r\n    padding: 0.5rem;\r\n}\r\n\r\nmain .row .table td {\r\n    padding: 0.5rem;\r\n    text-align: center;\r\n    border-bottom: 1px solid #c4c4c4;\r\n}\r\n\r\nmain .row .table tr:hover {background-color: #ddd;}\r\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./frontend/assets/css/index.css"],"names":[],"mappings":"AAAA;IACI,WAAW;IACX,yBAAyB;IACzB,mBAAmB;AACvB;;;AAGA;IACI,wCAAwC;IACxC,8BAA8B;IAC9B,gBAAgB;IAChB,eAAe;AACnB;;AAEA;IACI,eAAe;IACf,kBAAkB;IAClB,gCAAgC;AACpC;;AAEA,2BAA2B,sBAAsB,CAAC","sourcesContent":["main .row .table {\r\n    width: 100%;\r\n    border-collapse: collapse;\r\n    margin-bottom: 1rem;\r\n}\r\n\r\n\r\nmain .row .table th  {\r\n    background-color:var(--background-green);\r\n    color: var(--text-color-white);\r\n    font-weight: 600;\r\n    padding: 0.7rem;\r\n}\r\n\r\nmain .row .table td {\r\n    padding: 0.7rem;\r\n    text-align: center;\r\n    border-bottom: 1px solid #c4c4c4;\r\n}\r\n\r\nmain .row .table tr:hover {background-color: #ddd;}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

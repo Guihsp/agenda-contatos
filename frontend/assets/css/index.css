@@ -9,11 +9,11 @@ main .row .table th  {
     background-color:var(--background-green);
     color: var(--text-color-white);
     font-weight: 600;
-    padding: 0.5rem;
+    padding: 0.7rem;
 }
 
 main .row .table td {
-    padding: 0.5rem;
+    padding: 0.7rem;
     text-align: center;
     border-bottom: 1px solid #c4c4c4;
 }
