@@ -23,5 +23,6 @@ routes.get('/contact', loginRequired, contactController.index); // get contact p
 routes.post('/contact/register', loginRequired, contactController.register); // post contact page
 routes.get('/contact/index/:id', loginRequired, contactController.editIndex); // get contact edit page
 routes.post('/contact/edit/:id', loginRequired, contactController.edit); // post contact edit page
+routes.get('/contact/delete/:id', loginRequired, contactController.delete); // delete contact
 
 module.exports = routes;

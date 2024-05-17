@@ -12,6 +12,12 @@
 
         <h1 class="text-center title">Agenda de Contatos</h1>
         <p class="text-center">Gerencie seus contatos abaixo</p>
+
+        <% if (contacts.length === 0) { %>
+          <div class="alert alert-info">
+            Você ainda não possui contatos cadastrados.
+          </div>
+        <% } %>
   
         <%- include('includes/alert') %>
   
@@ -22,7 +28,18 @@
               <th>Sobrenome</th>
               <th>Telefone</th>
               <th>Email</th>
-            </tr>          
+              <th colspan="2">Ações</th>
+            </tr>       
+            <% contacts.forEach(contact => { %>
+              <tr>
+                <td><%= contact.name %></td>
+                <td><%= contact.lastName %></td>
+                <td><%= contact.phone %></td>
+                <td><%= contact.email %></td>
+                <td><a class="text-edit" href="/contact/index/<%= contact._id %>">editar</a></td>
+                <td><a class="text-danger" href="/contact/delete/<%= contact._id %>">apagar</a></td>
+              </tr>
+            <% }) %>   
             
           </table>
         </div>
