@@ -17,15 +17,15 @@ const routes = require('./routes'); // Importa o módulo de rotas
 const path = require('path'); // Importa o módulo path do Node.js
 const helmet = require('helmet'); // Importa o módulo helmet
 const csrf = require('csurf'); // Importa o módulo csurf
-const {meuMiddlewareGlobal, checkCsrfError, csrfMiddleware} = require('./src/middlewares/middleware'); // Importa o módulo de middleware
+const {meuMiddlewareGlobal, checkCsrfError, csrfMiddleware} = require('./middlewares/middleware'); // Importa o módulo de middleware
 
 app.use(express.urlencoded({ extended: true }));// Configura o middleware para analisar o corpo das solicitações HTTP POST que estão no formato urlencoded
 app.use(express.json());// Configura o middleware para analisar o corpo das solicitações HTTP POST que estão no formato JSON
-app.use(express.static(path.resolve(__dirname, 'public')));// Configura o middleware para servir arquivos estáticos do diretório 'public'
+app.use(express.static(path.resolve('public')));// Configura o middleware para servir arquivos estáticos do diretório 'public'
 app.use(helmet());// Configura o middleware para usar o helmet
 
 const sessionOptions = session({ // Configura as opções da sessão
-    secret: 'sdfgsdfgsdfgsdfgsdfgsdfg', // Chave secreta para assinar o cookie
+    secret: process.env.SESSION_SECRET, // Chave secreta para assinar o cookie da sessão
     store: MongoStore.create({ mongoUrl: process.env.CONNECTION_STRING }), // Armazena a sessão no banco de dados
     resave: false, // Não salva a sessão a cada requisição
     saveUninitialized: false, // Não salva sessões vazias
@@ -37,8 +37,8 @@ const sessionOptions = session({ // Configura as opções da sessão
 app.use(sessionOptions); // Configura o middleware para usar sessões
 app.use(flash()); // Configura o middleware para usar mensagens flash
 
-app.set('views', path.resolve(__dirname, 'src', 'views')); // Configura o caminho onde o express vai procurar as views
-app.set('view engine', 'ejs');// Configura o motor de visualização para ejs
+app.set('views', path.resolve(__dirname, 'views')); // Configura o caminho onde o express vai procurar as views
+app.set('view engine', 'ejs'); // Configura o mecanismo de visualização para EJS
 
 app.use(csrf());// Configura o middleware para usar o csurf
 app.use(meuMiddlewareGlobal);// Configura o middleware para usar o middleware importado

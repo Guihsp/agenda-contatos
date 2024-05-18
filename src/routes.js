@@ -1,10 +1,10 @@
 const express = require('express');
 const routes = express.Router();
-const homeController = require('./src/controllers/homeController'); // import home controller
-const loginController = require('./src/controllers/loginController'); // import login controller
-const registerController = require('./src/controllers/registerController'); // import register controller
-const contactController = require('./src/controllers/contactController'); // import contact controller
-const { loginRequired } = require('./src/middlewares/middleware'); // import middleware
+const homeController = require('./controllers/homeController'); // import home controller
+const loginController = require('./controllers/loginController'); // import login controller
+const registerController = require('./controllers/registerController'); // import register controller
+const contactController = require('./controllers/contactController'); // import contact controller
+const { loginRequired } = require('./middlewares/middleware'); // import middleware
 
 // home routes
 routes.get('/',homeController.index); // get home page
