@@ -1,16 +1,20 @@
 {
   "name": "agenda-contatos",
   "version": "1.0.0",
-  "description": "",
+  "description": "Uma aplicação de agenda de contatos construída com Node.js, Express e MongoDB",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon src/server.js --ignore public --ignore frontend",
     "dev": "webpack -w"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["agenda", "contatos", "Node.js", "Express", "MongoDB"],
+  "author": {
+    "name": "Guilherme Henrique Silva",
+    "email": "guilhermehsp26@gmail.com",
+    "url": "https://guilherme-dev-portfolio.vercel.app/"
+  },
+  "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "connect-flash": "^0.1.1",
