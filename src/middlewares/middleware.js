@@ -1,4 +1,4 @@
-exports.meuMiddlewareGlobal = (req, res, next) => {
+exports.globalMiddleware = (req, res, next) => {
     res.locals.errors = req.flash('errors');
     res.locals.success = req.flash('success');
     res.locals.user = req.session.user;
@@ -26,4 +26,8 @@ exports.loginRequired = (req, res, next) => {
     }
 
     next();
+}
+
+exports.page404 = (req, res, next) => {
+    res.status(404).render('404');
 }

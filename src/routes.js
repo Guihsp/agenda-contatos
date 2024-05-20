@@ -4,7 +4,7 @@ const homeController = require('./controllers/homeController'); // import home c
 const loginController = require('./controllers/loginController'); // import login controller
 const registerController = require('./controllers/registerController'); // import register controller
 const contactController = require('./controllers/contactController'); // import contact controller
-const { loginRequired } = require('./middlewares/middleware'); // import middleware
+const { loginRequired, page404 } = require('./middlewares/middleware'); // import middleware
 
 // home routes
 routes.get('/',homeController.index); // get home page
@@ -24,5 +24,8 @@ routes.post('/contact/register', loginRequired, contactController.register); // 
 routes.get('/contact/index/:id', loginRequired, contactController.editIndex); // get contact edit page
 routes.post('/contact/edit/:id', loginRequired, contactController.edit); // post contact edit page
 routes.get('/contact/delete/:id', loginRequired, contactController.delete); // delete contact
+
+// 404 page
+routes.use(page404); 
 
 module.exports = routes;

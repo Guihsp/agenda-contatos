@@ -3,17 +3,27 @@
 
 <%- include('includes/head') %>
 
+    <%- include('includes/header') %>
+
     <body>
 
         <main>
             <div class="container">
-                <h1 class="text-center title">404</h1>
-                <p class="text-center">Pagina que voce tentou acessar não existe ou foi removida.</p>
+                <div class="gears">
+                    <img src="/assets/img/settings-1.svg" class="gear-1">
+                    <img src="/assets/img/settings-1.svg" class="gear-2">
+                </div>
+                <h1 class="text-center title">Erro 404</h1>
+                <p class="text-center">
+                    Ops! Página não encontrada.
+                </p>
                 <p class="text-center">
                     <a href="/">Voltar para a pagina inicial</a>
                 </p>
             </div>
-        </section>
+        </main>
+
+        <%- include('includes/footer') %>
 
         <script src="/assets/js/bundle.js"></script>
     </body>

@@ -17,7 +17,7 @@ const routes = require('./routes'); // Importa o módulo de rotas
 const path = require('path'); // Importa o módulo path do Node.js
 const helmet = require('helmet'); // Importa o módulo helmet
 const csrf = require('csurf'); // Importa o módulo csurf
-const {meuMiddlewareGlobal, checkCsrfError, csrfMiddleware} = require('./middlewares/middleware'); // Importa o módulo de middleware
+const {globalMiddleware, checkCsrfError, csrfMiddleware} = require('./middlewares/middleware'); // Importa o módulo de middleware
 
 app.use(express.urlencoded({ extended: true }));// Configura o middleware para analisar o corpo das solicitações HTTP POST que estão no formato urlencoded
 app.use(express.json());// Configura o middleware para analisar o corpo das solicitações HTTP POST que estão no formato JSON
@@ -41,7 +41,7 @@ app.set('views', path.resolve(__dirname, 'views')); // Configura o caminho onde 
 app.set('view engine', 'ejs'); // Configura o mecanismo de visualização para EJS
 
 app.use(csrf());// Configura o middleware para usar o csurf
-app.use(meuMiddlewareGlobal);// Configura o middleware para usar o middleware importado
+app.use(globalMiddleware);// Configura o middleware para usar o middleware importado
 app.use(checkCsrfError);// Configura o middleware para usar o middleware importado
 app.use(csrfMiddleware);// Configura o middleware para usar o middleware importado
 app.use(routes);// Configura o middleware para usar as rotas importadas

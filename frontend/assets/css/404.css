@@ -1,0 +1,30 @@
+.gears {
+    width: 100px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.gear-1 {
+    position: relative;
+    left: 37px;
+    width: 74px;
+    height: 74px;
+    transform: rotate(0deg);
+    animation: spin 10s infinite linear;
+}
+
+.gear-2 {
+    position: relative;
+    left: 8px;
+    bottom: 42px;
+    width: 54px;
+    height: 54px;
+    transform: rotate(1deg);
+    animation: spin 10s infinite reverse linear;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
