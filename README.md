@@ -1,6 +1,6 @@
 # agenda-contatos
 
-Este projeto foi desenvolvido com o intuito de praticar alguns conhecimentos em Node.js, Express, MongoDB e JavaScript. A aplicação é uma agenda de contatos, onde é possível cadastrar, listar, atualizar e deletar contatos. A aplicação também conta com um sistema de autenticação, onde é possível realizar o cadastro de usuários, login e logout.
+Este projeto foi desenvolvido com o intuito de praticar alguns conhecimentos em Node.js, Express, MongoDB e JavaScript. A aplicação é uma agenda de contatos, onde é possível cadastrar, listar, atualizar e deletar contatos. A aplicação também conta com um sistema de autenticação, onde é possível realizar o cadastro de usuários, login e logout onde as informações são armazenadas no banco de dados.
 
 ## Tabela de Conteúdos
 - [Descrição do Projeto](#agenda-contatos)
@@ -25,7 +25,6 @@ Este projeto foi desenvolvido com o intuito de praticar alguns conhecimentos em 
 - Express
 - MongoDB
 - JavaScript
-- HTML
 - CSS
 - EJS
 
