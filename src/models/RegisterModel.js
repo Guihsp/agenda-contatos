@@ -61,7 +61,7 @@ class Register {
 
     async userExists() {
         this.user = await RegisterModel.findOne({email: this.body.email});
-        if(this.user) this.errors.push('Esse usuário já existe.');
+        if(this.user) this.errors.push('Já existe um usuário associado a este e-mail.');
     }
 
     cleanUp() {

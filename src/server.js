@@ -5,8 +5,8 @@ const app = express();// Cria uma nova aplicação express
 const mongoose = require('mongoose');// Importa o módulo mongoose
 
 mongoose.connect(process.env.CONNECTION_STRING). // Conecta ao banco de dados MongoDB
-    then(() => { // Se a conexão for bem sucedida, imprime uma mensagem no console
-        app.emit('pronto'); // Emite o evento 'pronto' para iniciar o servidor
+    then(() => { // Se a conexão for bem-sucedida executa o código abaixo
+        app.emit('ready'); // Emite o evento 'ready' para iniciar o servidor
     }).catch (e => console.log(e)); // Se a conexão falhar, imprime o erro no console
         
 
@@ -46,7 +46,7 @@ app.use(checkCsrfError);// Configura o middleware para usar o middleware importa
 app.use(csrfMiddleware);// Configura o middleware para usar o middleware importado
 app.use(routes);// Configura o middleware para usar as rotas importadas
 
-app.on('pronto', () => {
+app.on('ready', () => {
     // Inicia o servidor na porta 3000 e imprime uma mensagem no console após o servidor ser iniciado
     app.listen(3000, () => {
         console.log('Acessar http://localhost:3000');

@@ -1,6 +1,7 @@
 const Register = require('../models/RegisterModel');
 
 exports.index = (req, res) => { 
+    if(req.session.user) return res.render('login-logado');
     res.render('register');
 }
 
