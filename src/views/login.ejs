@@ -14,8 +14,10 @@
 
         <%- include('includes/alert') %>
 
+        <div class="error-messages"></div>
+
         <div class="row">
-          <form action="/login" method="POST">
+          <form action="/login" method="POST" class="form-login">
             <input type="hidden" name="_csrf" value=<%= csrfToken %>>
             
             <div class="form-group">

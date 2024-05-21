@@ -6,7 +6,6 @@
     --background-gary: #f5f5f5;
     --background-green: #2c9986;
     --text-color-dark: #333;
-    --text-color-light: #848999;
     --text-color-white: #fff;
     --font-family: 'Montserrat', sans-serif;
 }
@@ -47,13 +46,15 @@ footer {
     margin-top: 2rem;
 }
 
-header .container, footer .container{
+header .container,
+footer .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header .logo a, footer .logo a{
+header .logo a,
+footer .logo a {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--text-color-white);
@@ -63,7 +64,8 @@ header .logo a, footer .logo a{
     gap: 0.5rem;
 }
 
-header .nav-bar, footer .nav-bar{
+header .nav-bar,
+footer .nav-bar {
     display: flex;
     gap: 1rem;
     list-style: none;
@@ -96,6 +98,10 @@ main {
     flex: 1 0 auto;
 }
 
+p.text-center {
+    color: var(--text-color-dark);
+}
+
 .text-center {
     text-align: center;
     margin-bottom: 1rem;
@@ -125,7 +131,17 @@ main {
     color: var(--text-color-dark);
 }
 
-.row .alert, .alert-info{
+.row .alert,
+.alert-info {
+    padding: 0.7rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+}
+
+.error-messages .alert {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
     padding: 0.7rem 1rem;
     margin-bottom: 1rem;
     border-radius: 0.25rem;

@@ -15,13 +15,15 @@
   
         <%- include('includes/alert') %>
 
+        <div class="error-messages"></div>
+
         <div class="row">
           <% if(contact._id) { %>
             <h2 class="text-center title-h2">Editar Contato</h2>
-            <form action="/contact/edit/<%= contact._id %>" method="POST">
+            <form action="/contact/edit/<%= contact._id %>" method="POST" class="form-contact">
           <% } else { %>
             <h2 class="text-center title-h2">Novo Contato</h2>
-            <form action="/contact/register" method="POST">
+            <form action="/contact/register" method="POST" class="form-contact">
           <% } %>
             <input type="hidden" name="_csrf" value=<%= csrfToken %>>
             
