@@ -15,7 +15,7 @@
 
         <% if (contacts.length === 0) { %>
           <div class="alert alert-info">
-            Você ainda não possui contatos cadastrados.
+            Você não possui contatos cadastrados.
           </div>
         <% } %>
   
@@ -34,8 +34,12 @@
               <tr>
                 <td><%= contact.name %></td>
                 <td><%= contact.lastName %></td>
-                <td><%= contact.phone %></td>
-                <td><%= contact.email %></td>
+                <td>
+                  <a href="https://api.whatsapp.com/send?phone=55<%= contact.phone %>" target="_blank"><%= contact.phone %></a>
+                </td>
+                <td>
+                  <a href="mailto:<%= contact.email %>"><%= contact.email %></a>
+                </td>
                 <td><a class="text-edit" href="/contact/index/<%= contact._id %>">editar</a></td>
                 <td><a class="text-danger" href="/contact/delete/<%= contact._id %>">apagar</a></td>
               </tr>
